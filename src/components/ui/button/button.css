@@ -1,0 +1,27 @@
+.button {
+  flex: 1;
+  height: 4.8rem;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #e2e3e5;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #000000;
+  transition: all 0.2s;
+}
+
+.button:active {
+  border: 2px solid #5d5fef;
+}
+
+.button--blue {
+  background-color: #5d5fef;
+  color: #ffffff;
+}
+
+.button--disabled {
+  pointer-events: none;
+}

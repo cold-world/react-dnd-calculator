@@ -1,0 +1,54 @@
+.switch-field {
+  display: flex;
+  position: absolute;
+  top: -6rem;
+  width: 100%;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  color: #4d5562;
+  border-radius: 6px;
+  background-color: #f3f4f6;
+}
+
+.switch-field input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.switch-field label {
+  background-color: #f3f4f6;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  padding: 8px 16px;
+  margin-right: -1px;
+  transition: all 0.1s ease-in-out;
+  width: 100%;
+  border-radius: 6px;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid #f3f4f6;
+}
+
+.switch-field label:hover {
+  cursor: pointer;
+}
+
+.switch-field input:checked + label {
+  background-color: #ffffff;
+  box-shadow: none;
+  border: 1px solid #e2e3e5;
+}
+
+.switch-field label {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}

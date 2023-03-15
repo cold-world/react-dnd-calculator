@@ -1,0 +1,9 @@
+.sidebar {
+  flex-basis: 24rem;
+  transition: all 0.3s;
+}
+
+.sidebar--disabled {
+  opacity: 0;
+  pointer-events: none;
+}
