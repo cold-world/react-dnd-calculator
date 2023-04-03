@@ -16,7 +16,8 @@ Main goal -> Create a custom calculator with react drag and drop.
 
 ### A piece of code
 
-```const onDropHandler = (e: React.DragEvent<HTMLDivElement>) => {
+```
+const onDropHandler = (e: React.DragEvent<HTMLDivElement>) => {
     e.stopPropagation();
     setOnDragEnterBlock(null);
 
