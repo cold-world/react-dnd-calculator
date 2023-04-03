@@ -1,17 +1,12 @@
-Forkify App
+React drag and drop calculator constructor app.
 =======================================
 
-HTML, CSS, JavaScript
+React, typescript, redux
 
-Main goal -> Create an app using the MVC architecture pattern that searches for meal recipes from an API. 
-
-Features -> 
-1. allows users to add or remove recipes to/from their bookmarked list.
-2. calc ingredients by servings.
-3. add your own recipe.
+Main goal -> Create a custom calculator with react drag and drop.
 
 * * *
-### [Demo](https://cold-world.github.io/forkify/)
+### [Demo](https://cold-world.github.io/react-dnd-calculator/)
 
 ![Alt Text](https://i.ibb.co/MhbpRCj/2.gif)
 
@@ -21,26 +16,15 @@ Features ->
 
 ### A piece of code
 
-```import View from './View';
-import previewView from './previewView';
-
-class ResultsView extends View {
-  _parentElement = document.querySelector('.results');
-  _errorMessage = 'No recipes found for this query';
-  _message = '';
-
-  _generateTemplate() {
-    return this._data.map((result) => previewView.render(result, false)).join(' ');
-  }
-}
-
-export default new ResultsView();
+```const onDragStart = (e: React.DragEvent<HTMLDivElement>, blockType: string) => {
+    e.dataTransfer.setData('blockType', blockType);
+  };
 ```
 
 ### Download & Installation
 
 ```shell 
-git clone https://github.com/cold-world/forkify.git
+git clone https://github.com/cold-world/react-dnd-calculator.git
 cd <project dir>
 yarn install
 yarn start
