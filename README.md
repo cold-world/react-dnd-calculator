@@ -16,9 +16,22 @@ Main goal -> Create a custom calculator with react drag and drop.
 
 ### A piece of code
 
-```const onDragStart = (e: React.DragEvent<HTMLDivElement>, blockType: string) => {
-    e.dataTransfer.setData('blockType', blockType);
-  };
+```const onDropHandler = (e: React.DragEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+    setOnDragEnterBlock(null);
+
+    const blockType = e.dataTransfer.getData('blockType');
+    const blockInCanvas = canvasList.find((item) => item.blockType === blockType);
+    const indexBlockInCanvas = canvasList.findIndex((item) => item.blockType === blockType);
+    const blockInSidebar = sidebarList.find((item) => item.blockType === blockType);
+    if (onDragEnterBlock === blockType) return;
+    if (blockInCanvas?.blockType === 'display') return;
+
+    if (indexBlockInCanvas > -1) {
+      if (onDragEnterBlock === 'canvas') {
+        dispatch(deleteFromCanvas(canvasList[indexBlockInCanvas]));
+        blockInCanvas && dispatch(addToCanvas({ block: blockInCanvas, position: -1 }));
+      }
 ```
 
 ### Download & Installation
